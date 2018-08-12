@@ -1,6 +1,21 @@
 {
-  "scripts": {
-    "test": "mocha --require ../node_modules/babel-core/register test",
-    "start": "../node_modules/.bin/babel-node index.js"
-  }
+	"scripts": {
+		"test": "mocha --require ../node_modules/babel-core/register test",
+		"start": "nodemon index.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"express": "^4.16.3"
+	},
+	"name": "rest-api",
+	"description":
+		"You've been provided with `index.js`, a bare-bones Express web server that will listen on port 8888. Start this server by running `npm start` inside this problem's directory. Using the content of `models/users.js` as user data, (made available to you already in `index.js`), build out the following API:",
+	"version": "1.0.0",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"devDependencies": {},
+	"author": "",
+	"license": "ISC"
 }

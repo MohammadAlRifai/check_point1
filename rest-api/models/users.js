@@ -1,4 +1,4 @@
-var _ = require('underscore');
+// var _ = require('underscore');
 
 // The seeded state of our in-memory "database"
 var users = [
@@ -21,34 +21,49 @@ var users = [
 
 var nextId = 4;
 
-var getNextId = function () {
+var getNextId = function() {
   return nextId++;
 };
 
 // Public methods. Build out these functions as necessary
 // The first two have been done for you!
-exports.getAll = function () {
+exports.getAll = function() {
   return users;
 };
 
-exports.setAll = function (newUsers) {
+exports.setAll = function(newUsers) {
   users = newUsers;
   nextId = newUsers.length + 1;
   return newUsers;
 };
 
-exports.getOne = function (id) {
-
+exports.getOne = function(id) {
+  for (var i = 0; i < users.length; i++) {
+    if (id === users[i].id) {
+      return users[i];
+    }
+  }
+  return null;
 };
 
-exports.addOne = function (user) {
- 
+exports.addOne = function(user) {
+  return users.push(user);
 };
 
-exports.updateOne = function (id, newProperties) {
- 
+exports.updateOne = function(id, newProperties) {
+  for (var i = 0; i < users.length; i++) {
+    if (id === users[i].id) {
+      users[i].newProperties = newProperties[key];
+    }
+  }
+  return users;
 };
 
-exports.deleteOne = function (id) {
- 
+exports.deleteOne = function(id) {
+  for (var i = 0; i < users.length; i++) {
+    if (id === users[i].id) {
+      users.splice(users[i], 1);
+    }
+  }
+  return users;
 };
