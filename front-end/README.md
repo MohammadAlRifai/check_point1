@@ -2,10 +2,10 @@
 
 You've been given a working backend that implements the following api:
 
-|       URL      | HTTP Verb | POST Body |                   Result                      |
-|:--------------:|:---------:|:---------:|:---------------------------------------------:|
-| /api/users     |    GET    |   empty   |                      Return JSON of all users |
-| /api/users     |    POST   |    JSON   |                               Create new user |
+|      URL       | HTTP Verb | POST Body |                    Result                     |
+| :------------: | :-------: | :-------: | :-------------------------------------------: |
+|   /api/users   |    GET    |   empty   |           Return JSON of all users            |
+|   /api/users   |   POST    |   JSON    |                Create new user                |
 | /api/users/:id |    GET    |   empty   | Return JSON of single user with matching `id` |
 
 Your goal will be to **implement using either Angular, Backbone, or a ReactJS / jQuery combo, a single page front end to interact with this api.** Your front end should allow the user to add new users, and view current users, and should express your understanding of what a well-structured application (albeit a small one) looks like.
